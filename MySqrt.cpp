@@ -8,7 +8,6 @@ double MySqrt(int n) {
 	unsigned int p = 1,sqrtp=1; // unsigned int can store 1 higher power of 2 than int
 	int count = 0; // p = 2^count, keeping track of the power
 	while (p < n) {
-		//cout << p << "," << sqrtp << "," << sqrt(p) << endl;
 		p <<= 1; // shift the set bit in p to the left until we arrive at the first power of 2 larger than n
 		count++; 
 		if (count % 2 == 0) {
