@@ -10,8 +10,8 @@ double MySqrt(int n) {
 	if ( n < 0) { return -1; } // return error code for invalid input
 	unsigned int p = 1,sqrtp=1; // unsigned int can store 1 higher power of 2 than int
 	int count = 0; // p = 2^count, keeping track of the power
-	while (p <= n) { // at most 32 iterations
-		p <<= 1; // shift the set bit in p to the left until we arrive at the first power of 2 larger than n
+	while (p < n) { // at most 32 iterations
+		p <<= 1; // shift the set bit in p to the left until we arrive at the first power of 2 larger or equal to n
 		count++; 
 		if (count % 2 == 0) {
 			sqrtp <<= 1; // shift the bit in sqrtp only every second shift, to get approximate square root of p
