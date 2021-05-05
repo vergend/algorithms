@@ -24,18 +24,18 @@ double MySqrt(int n) {
 	// considering that epsilonPowers[i] are powers of a number <=0.5 and int can store at most 10 significant digits
 	// the following Taylor expansion to 30th power is guaranteed to be precise to 12 significant digits, which is enough
 	double result = sqrtp * (1 - epsilonPowers[1] / 2. - epsilonPowers[2] / 8. - epsilonPowers[3] / 16. - (5. * epsilonPowers[4]) / 128. -
-							(7. / 256.) * epsilonPowers[5] - (21. / 1024.) * epsilonPowers[6] - (33. / 2048.) * epsilonPowers[7] -
-							(429. / 32768.) * epsilonPowers[8] - (715. / 65536.) * epsilonPowers[9] - (2431. / 262144.) * epsilonPowers[10] -
-							(4199. / 524288.) * epsilonPowers[11] - (29393. / 4194304.) * epsilonPowers[12] -
-							(52003. / 8388608.) * epsilonPowers[13] - (185725. / 33554432.) * epsilonPowers[14] -
-							(334305. / 67108864.) * epsilonPowers[15] - (9694845. / 2147483648.) * epsilonPowers[16] -
-							(17678835. / 4294967296.) * epsilonPowers[17] - (64822395. / 17179869184.) * epsilonPowers[18] -
-							(119409675. / 34359738368.) * epsilonPowers[19] - (883631595. / 274877906944.) * epsilonPowers[20] -
-							(1641030105. / 549755813888.) * epsilonPowers[21] - (6116566755. / 2199023255552.) * epsilonPowers[22] -
-							(11435320455. / 4398046511104.) * epsilonPowers[23] - (171529806825. / 70368744177664.) * epsilonPowers[24] -
-							(322476036831. / 140737488355328.) * epsilonPowers[25] - (1215486600363. / 562949953421312.) * epsilonPowers[26] -
-							(2295919134019. / 1125899906842624.) * epsilonPowers[27] - (17383387729001. / 9007199254740992.) * epsilonPowers[28] -
-							(32968493968795. / 18014398509481984.) * epsilonPowers[29] - (125280277081421. / 72057594037927936.) * epsilonPowers[30]);
+				(7. / 256.) * epsilonPowers[5] - (21. / 1024.) * epsilonPowers[6] - (33. / 2048.) * epsilonPowers[7] -
+				(429. / 32768.) * epsilonPowers[8] - (715. / 65536.) * epsilonPowers[9] - (2431. / 262144.) * epsilonPowers[10] -
+				(4199. / 524288.) * epsilonPowers[11] - (29393. / 4194304.) * epsilonPowers[12] -
+				(52003. / 8388608.) * epsilonPowers[13] - (185725. / 33554432.) * epsilonPowers[14] -
+				(334305. / 67108864.) * epsilonPowers[15] - (9694845. / 2147483648.) * epsilonPowers[16] -
+				(17678835. / 4294967296.) * epsilonPowers[17] - (64822395. / 17179869184.) * epsilonPowers[18] -
+				(119409675. / 34359738368.) * epsilonPowers[19] - (883631595. / 274877906944.) * epsilonPowers[20] -
+				(1641030105. / 549755813888.) * epsilonPowers[21] - (6116566755. / 2199023255552.) * epsilonPowers[22] -
+				(11435320455. / 4398046511104.) * epsilonPowers[23] - (171529806825. / 70368744177664.) * epsilonPowers[24] -
+				(322476036831. / 140737488355328.) * epsilonPowers[25] - (1215486600363. / 562949953421312.) * epsilonPowers[26] -
+				(2295919134019. / 1125899906842624.) * epsilonPowers[27] - (17383387729001. / 9007199254740992.) * epsilonPowers[28] -
+				(32968493968795. / 18014398509481984.) * epsilonPowers[29] - (125280277081421. / 72057594037927936.) * epsilonPowers[30]);
 	
 	if (count % 2) {
 		result *= sqrt2; // additional factor of sqrt(2) if the original power "count" is odd
