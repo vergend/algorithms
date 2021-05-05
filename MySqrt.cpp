@@ -7,7 +7,8 @@
 using namespace std;
 
 double MySqrt(int n) {
-	if ( n < 0) { return -1; } // return error code for invalid input
+	if ( n < 0 ) { return -1; } // return error code for invalid input
+	if( n == 0 ) { return 0; }
 	unsigned int p = 1,sqrtp=1; // unsigned int can store 1 higher power of 2 than int
 	int count = 0; // p = 2^count, keeping track of the power
 	while (p < n) { // at most 32 iterations
