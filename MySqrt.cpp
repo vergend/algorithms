@@ -1,3 +1,6 @@
+// MySqrt
+// Calculating the square root of an int by using addition, subtraction, multiplication and division only.
+
 #include <iostream>
 #include <time.h>
 
