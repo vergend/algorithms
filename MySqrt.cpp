@@ -15,7 +15,7 @@ double MySqrt(int n) {
 		p <<= 1; // shift the set bit in p to the left until we arrive at the first power of 2 larger or equal to n
 		count++; 
 		if (count % 2 == 0) {
-			sqrtp <<= 1; // shift the bit in sqrtp only every second shift, to get approximate square root of p
+			sqrtp <<= 1; // shift the bit in sqrtp only every second iteration, to get approximate square root of p
 		}
 	}
 	double sqrt2 = 1.414213562373095; // In case the power "count" is odd, we will need the square root of 2
