@@ -15,7 +15,7 @@ double MySqrt(int n) {
 		}
 	}
 	double sqrt2 = 1.414213562373095; // In case the power "count" is odd, we will need the square root of 2
-	double epsilonPowers[31];// we will sum 30 first summands of a Taylor expansion
+	double epsilonPowers[31];// we will sum 31 first summands of a Taylor expansion
 	epsilonPowers[1] = ((double)(p - n)) / p; // deviation of p from n. By definition of p we have epsilonPowers[1]<=0.5
 	for (int i = 2; i < 31; i++) {
 		epsilonPowers[i] = epsilonPowers[i - 1] * epsilonPowers[1];
