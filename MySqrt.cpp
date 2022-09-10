@@ -24,8 +24,8 @@ double MySqrt(int n) {
 	for (int i = 2; i < 31; i++) {
 		epsilonPowers[i] = epsilonPowers[i - 1] * epsilonPowers[1];
 	}
-	// considering that epsilonPowers[i] are powers of a number <=0.5 and int can store at most 10 significant digits
-	// the following Taylor expansion to 30th power is guaranteed to be precise to 12 significant digits, which is enough
+	// considering that epsilonPowers[i] are powers of a number <=0.5 and int can store at most 10 significant digits, the following Taylor expansion
+	// (taking expansion coefficients into consideration) to 30th power is guaranteed to be precise to 12 significant digits, which is enough
 	double result = sqrtp * (1 - epsilonPowers[1] / 2. - epsilonPowers[2] / 8. - epsilonPowers[3] / 16. - (5. * epsilonPowers[4]) / 128. -
 				(7. / 256.) * epsilonPowers[5] - (21. / 1024.) * epsilonPowers[6] - (33. / 2048.) * epsilonPowers[7] -
 				(429. / 32768.) * epsilonPowers[8] - (715. / 65536.) * epsilonPowers[9] - (2431. / 262144.) * epsilonPowers[10] -
